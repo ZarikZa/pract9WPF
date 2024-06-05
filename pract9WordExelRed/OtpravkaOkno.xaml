@@ -1,0 +1,28 @@
+﻿<Window x:Class="pract9WordExelRed.OtpravkaOkno"
+        xmlns:mat="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:pract9WordExelRed"
+        mc:Ignorable="d"
+        Title="OtpravkaOkno" Height="350" Width="550">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <TextBlock Text="Для того, чтобы отправить файл, необходимо указать свою почту и пароль, также почту и тему кому вы отправляете" TextWrapping="Wrap" VerticalAlignment="Center"  HorizontalAlignment="Center" FontSize="15"/>
+        <TextBox x:Name="YourMailTbox" Grid.Row="1" mat:HintAssist.Hint="Ваша почта" VerticalAlignment="Center" FontSize="20"/>
+        <TextBox x:Name="PasswordTbox" mat:HintAssist.Hint="Пароль" Grid.Row="2" VerticalAlignment="Center" FontSize="20"/>
+        <Separator Grid.Row="3"/>
+        <TextBox x:Name="FriendMailTbox" Grid.Row="4" mat:HintAssist.Hint="Почта друга" VerticalAlignment="Center" FontSize="20"/>
+        <TextBox x:Name="ThemeTbox" Grid.Row="5" mat:HintAssist.Hint="Тема письма" VerticalAlignment="Center" FontSize="20"/>
+        <Button x:Name="SendBtm" Grid.Row="6" Content="Отпрвить" Click="SendBtm_Click"/>
+    </Grid>
+</Window>
